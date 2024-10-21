@@ -11,11 +11,12 @@ namespace Services
 {
     public class CoffeeService: ControllerBase, ICoffeeService
     {
-       
+        private readonly IOpenWeatherService _openWeatherService;
         private static int _callCount = 0;
-        public CoffeeService()
+        private const double KELVIN_TEMP = 273.15;
+        public CoffeeService(IOpenWeatherService openWeatherService)
         {
-           
+            _openWeatherService = openWeatherService;
         }
 
         public async Task<IActionResult> BrewCoffee()
@@ -23,6 +24,10 @@ namespace Services
             _callCount++;
            
             DateTime currentDate = DateTime.Now;
+
+            var weatherResponse = await _openWeatherService.CallWeatherServiceAsync();
+            var temperature = weatherResponse?.main.temp - KELVIN_TEMP;
+            var responseMessage = temperature > 30 ? "Your refreshing iced coffee is ready" : "Your piping hot coffee is ready";
 
             if (currentDate.Month == 4 && currentDate.Day == 1)
             {
@@ -34,7 +39,7 @@ namespace Services
                return StatusCode(503, "Service Unavailable.");
             }
 
-            var response = new ApiResponseDto {message = "Your piping hot coffee is ready", prepared = currentDate.ToString("o")};
+            var response = new ApiResponseDto {message = responseMessage, prepared = currentDate.ToString("o")};
             return Ok(response);
         }
     }

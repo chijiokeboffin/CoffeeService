@@ -5,17 +5,21 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BA0C00D5-9BDC-436C-A04E-48C9EA6BE21D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{6540DB55-9FCD-4AEF-89B7-5D2EC6FF67AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{6540DB55-9FCD-4AEF-89B7-5D2EC6FF67AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Abstractions", "Services.Abstractions\Services.Abstractions.csproj", "{63FF7BDD-3DF9-4419-9F1C-EA18169531AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Abstractions", "Services.Abstractions\Services.Abstractions.csproj", "{63FF7BDD-3DF9-4419-9F1C-EA18169531AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{0FC4A447-3D81-4AF9-B7DE-3D18FA165ADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{0FC4A447-3D81-4AF9-B7DE-3D18FA165ADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{3DCF6A21-48E6-448B-94C0-84BBD73D326D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{3DCF6A21-48E6-448B-94C0-84BBD73D326D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F0020C2B-2974-40D2-ADE9-87540A652E08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{F0020C2B-2974-40D2-ADE9-87540A652E08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachine.Test", "CoffeeMachine.Test\CoffeeMachine.Test.csproj", "{5368D7AD-ABE8-4D58-B323-3AEA93881767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachine.Test", "CoffeeMachine.Test\CoffeeMachine.Test.csproj", "{5368D7AD-ABE8-4D58-B323-3AEA93881767}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{163837B2-F1B4-4254-AC47-8A61D712C83B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService", "WeatherService\WeatherService.csproj", "{32322268-2873-4FAB-BA55-A8EEDE070A68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,10 @@ Global
 		{5368D7AD-ABE8-4D58-B323-3AEA93881767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5368D7AD-ABE8-4D58-B323-3AEA93881767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5368D7AD-ABE8-4D58-B323-3AEA93881767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32322268-2873-4FAB-BA55-A8EEDE070A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32322268-2873-4FAB-BA55-A8EEDE070A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32322268-2873-4FAB-BA55-A8EEDE070A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32322268-2873-4FAB-BA55-A8EEDE070A68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +64,7 @@ Global
 		{63FF7BDD-3DF9-4419-9F1C-EA18169531AA} = {BA0C00D5-9BDC-436C-A04E-48C9EA6BE21D}
 		{3DCF6A21-48E6-448B-94C0-84BBD73D326D} = {BA0C00D5-9BDC-436C-A04E-48C9EA6BE21D}
 		{F0020C2B-2974-40D2-ADE9-87540A652E08} = {BA0C00D5-9BDC-436C-A04E-48C9EA6BE21D}
+		{32322268-2873-4FAB-BA55-A8EEDE070A68} = {163837B2-F1B4-4254-AC47-8A61D712C83B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24CDD9D0-F1F8-445D-AE9F-D0805D7DCC69}
